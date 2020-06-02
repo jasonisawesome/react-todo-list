@@ -16,12 +16,14 @@ class TodoInput extends Component {
             <input
               type="text"
               className="form-control text-capitalize"
-              placeholder="add todo item"
+              placeholder="add item"
               value={item}
               onChange={handleChange}
+              
             />
           </div>
           <button
+            style={{cursor:"pointer"}}
             disabled={item ? false : true}
             type="submit"
             className={
@@ -30,7 +32,7 @@ class TodoInput extends Component {
                 : "btn btn-block btn-primary mt-3"
             }
           >
-            {editItem ? "edit item" : "add item"}
+            {editItem ? "EDIT ITEM" : "ADD ITEM"}
           </button>
         </form>
       </div>
